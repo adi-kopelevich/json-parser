@@ -18,7 +18,7 @@ public class JsonMarshaller {
         }
         Class objectClass = object.getClass();
         Annotation[] jsonObjAnnotation = objectClass.getAnnotationsByType(JsonObjectAnnotation.class);
-        if (jsonObjAnnotation == null || jsonObjAnnotation.length != 1) {
+        if (jsonObjAnnotation == null || jsonObjAnnotation.length == 0) {
             throw new ParseException(MarshallingErrorMessages.OBJ_NOT_ANNOTATED);
         }
         ObjectNode rootJsonObject = new ObjectNode();
