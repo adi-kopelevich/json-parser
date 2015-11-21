@@ -1,8 +1,5 @@
 package sample.tree.node.parser.json;
 
-import sample.tree.node.parser.json.ValueNode;
-import sample.tree.node.parser.json.ParserUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +12,10 @@ public abstract class ComplexNode implements ValueNode {
 
     public void addNode(ValueNode node) {
         nodes.add(node);
+    }
+
+    public void addNode(List<ValueNode> nodeList) {
+        nodes.addAll(nodeList);
     }
 
     public abstract String getOpenBracket();
